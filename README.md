@@ -6,9 +6,15 @@ This tool is designed to immitate netcat for the purposes of SSH's ProxyCommand.
 
 On first run you will need to login, a link is provided for ease of use. Auth keys are also supported, see below for use
 ```
-$ ssh -o 'ProxyCommand ./tailscale-netcat -host %h -port %p' myserver
+sean@laptop:~$ ssh -o 'ProxyCommand tailscale-netcat -host %h -port %p' myserver
 2022/04/02 15:54:42 NeedsLogin: https://login.tailscale.com/a/12345678
 kex_exchange_identification: Connection closed by remote host
+```
+
+On second login, you'll be in:
+```
+sean@laptop:~$ ssh -o 'ProxyCommand tailscale-netcat -host %h -port %p' myserver
+sean@myserver:~$ 
 ```
 
 Optional Env Vars:
