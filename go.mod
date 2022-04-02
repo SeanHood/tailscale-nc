@@ -1,4 +1,4 @@
-module github.com/markpash/tailscale-sidecar
+module github.com/seanhood/tailscale-netcat
 
 go 1.17
 
